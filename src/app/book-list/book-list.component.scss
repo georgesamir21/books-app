@@ -1,0 +1,50 @@
+@import "../../variables";
+
+.container {
+  width: 500px;
+  margin: auto;
+
+  .book-card {
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0px 3px 7px -4px $balck-shadow;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 7px;
+    background: $white;
+
+    .author {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .buttons {
+    .button {
+      color: $white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      width: 200px;
+      height: 40px;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: bold;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .buttons__clear {
+      background: $green;
+      border: 1px solid darken($green, 15%);
+    }
+
+    .buttons__list {
+      background: $light-blue;
+      border: 1px solid darken($light-blue, 15%);
+    }
+  }
+}

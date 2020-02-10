@@ -1,0 +1,19 @@
+<div class="container">
+  <ng-container *ngIf="isDisplayed">
+    <div *ngFor="let book of bookList" class="book-card">
+      <div class="author">
+        Author: {{ book?.author }}
+      </div>
+      <div class="sold-statistics">
+        Sold Statistics:
+        <div *ngFor="let sold of book.sold" class="sold-statistics__item">
+          {{ sold['sold pieces'] }} pieces in {{ sold?.country | titlecase }} on {{ sold?.year | date: 'mediumDate' }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div class="buttons">
+    <button (click)="clearBookList()" class="button buttons__clear">Clear</button>
+    <button (click)="showBookList()" class="button buttons__list">List</button>
+  </div>
+</div>
